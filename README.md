@@ -70,7 +70,6 @@ For monochrome OLEDs and LCDs:
         -- Installing: /usr/local/lib/cmake/u8g2/u8g2-targets-noconfig.cmake<br>
         -- Installing: /usr/local/lib/cmake/u8g2/u8g2-config.cmake
         </p>
-
          <p>Create a Symlink for Easier Access:</p>
          <pre><code>sudo ln -s /usr/local/include/u8g2 /usr/local/include/u8g2</code></pre>
       </details>
