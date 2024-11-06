@@ -1,6 +1,8 @@
 # Autonomous UAVs: MAVLink Communication Between FCs and SBCs
 
-![sbc_fc](Images/sbc_fc.png)
+<p align="center">
+  <img src="Images/sbc_fc.png" alt="sbc_fc">
+</p>
 
 ## Integrating Peripherals for Status Display and Image Processing in UAVs
 ![sbc_fc_ench](Images/sbc_fc_ench.png)
@@ -10,77 +12,73 @@
 
 For monochrome OLEDs and LCDs:
 <ol style="line-height: 2; list-style-type: none;">
-   <li><details>
-      <summary>U8g2 Library Setup</summary>
-        Navigate to the u8g2 directory:
-        ```bash
-        cd ~/u8g2
-        ```
-        Create a build directory and navigate into it:
-        ```bash
-        mkdir build && cd build
-        ```
-        Run CMake to configure the project:
-        ```bash
-        cmake ..
-        ```
-        *Output:*
-        -- The C compiler identification is GNU 10.2.1
-        -- The CXX compiler identification is GNU 10.2.1
-        -- Detecting C compiler ABI info
-        -- Detecting C compiler ABI info - done
-        -- Check for working C compiler: /usr/bin/cc - skipped
-        -- Detecting C compile features
-        -- Detecting C compile features - done
-        -- Detecting CXX compiler ABI info
-        -- Detecting CXX compiler ABI info - done
-        -- Check for working CXX compiler: /usr/bin/c++ - skipped
-        -- Detecting CXX compile features
-        -- Detecting CXX compile features - done
-        -- Configuring done
-        -- Generating done
+   <li>
+      <details>
+        <summary>U8g2 Library Setup</summary>
+        <p>Navigate to the u8g2 directory:</p>
+        <pre><code>cd ~/u8g2</code></pre>
+        <p>Create a build directory and navigate into it:</p>
+        <pre><code>mkdir build && cd build</code></pre>
+        <p>Run CMake to configure the project:</p>
+        <pre><code>cmake ..</code></pre>
+        <p><strong>Output:</strong></p>
+        <p>
+        -- The C compiler identification is GNU 10.2.1<br>
+        -- The CXX compiler identification is GNU 10.2.1<br>
+        -- Detecting C compiler ABI info<br>
+        -- Detecting C compiler ABI info - done<br>
+        -- Check for working C compiler: /usr/bin/cc - skipped<br>
+        -- Detecting C compile features<br>
+        -- Detecting C compile features - done<br>
+        -- Detecting CXX compiler ABI info<br>
+        -- Detecting CXX compiler ABI info - done<br>
+        -- Check for working CXX compiler: /usr/bin/c++ - skipped<br>
+        -- Detecting CXX compile features<br>
+        -- Detecting CXX compile features - done<br>
+        -- Configuring done<br>
+        -- Generating done<br>
         -- Build files have been written to: /home/radxa/u8g2/build
-
-        Build the project:
-        ```bash
-        make
-        ```
-        *Output:*
-        Scanning dependencies of target u8g2
-        [  0%] Building C object CMakeFiles/u8g2.dir/csrc/mui.c.o
-        [  1%] Building C object CMakeFiles/u8g2.dir/csrc/mui_u8g2.c.o
-        [  2%] Building C object CMakeFiles/u8g2.dir/csrc/u8g2_arc.c.o
-        [  3%] Building C object CMakeFiles/u8g2.dir/csrc/u8g2_bitmap.c.o
-        ...
-        [ 97%] Building C object CMakeFiles/u8g2.dir/csrc/u8x8_string.c.o
-        [ 98%] Building C object CMakeFiles/u8g2.dir/csrc/u8x8_u16toa.c.o
-        [ 99%] Building C object CMakeFiles/u8g2.dir/csrc/u8x8_u8toa.c.o
-        [100%] Linking C static library libu8g2.a
+        </p>
+        <p>Build the project:</p>
+        <pre><code>make</code></pre>
+        <p><strong>Output:</strong></p>
+        <p>
+        Scanning dependencies of target u8g2<br>
+        [  0%] Building C object CMakeFiles/u8g2.dir/csrc/mui.c.o<br>
+        [  1%] Building C object CMakeFiles/u8g2.dir/csrc/mui_u8g2.c.o<br>
+        [  2%] Building C object CMakeFiles/u8g2.dir/csrc/u8g2_arc.c.o<br>
+        [  3%] Building C object CMakeFiles/u8g2.dir/csrc/u8g2_bitmap.c.o<br>
+        ...<br>
+        [ 97%] Building C object CMakeFiles/u8g2.dir/csrc/u8x8_string.c.o<br>
+        [ 98%] Building C object CMakeFiles/u8g2.dir/csrc/u8x8_u16toa.c.o<br>
+        [ 99%] Building C object CMakeFiles/u8g2.dir/csrc/u8x8_u8toa.c.o<br>
+        [100%] Linking C static library libu8g2.a<br>
         [100%] Built target u8g2
-
-        Install the library:
-        ```bash
-        sudo make install
-        ```
-        *Output:*
-        [100%] Built target u8g2
-        Install the project...
-        -- Install configuration: ""
-        -- Installing: /usr/local/lib/libu8g2.a
-        -- Installing: /usr/local/include/u8g2/mui.h
-        -- Installing: /usr/local/include/u8g2/mui_u8g2.h
-        -- Installing: /usr/local/include/u8g2/u8g2.h
-        -- Installing: /usr/local/include/u8g2/u8x8.h
-        -- Installing: /usr/local/lib/cmake/u8g2/u8g2-targets.cmake
-        -- Installing: /usr/local/lib/cmake/u8g2/u8g2-targets-noconfig.cmake
+        </p>
+        <p>Install the library:</p>
+        <pre><code>sudo make install</code></pre>
+        <p><strong>Output:</strong></p>
+        <p>
+        Install the project...<br>
+        -- Install configuration: ""<br>
+        -- Installing: /usr/local/lib/libu8g2.a<br>
+        -- Installing: /usr/local/include/u8g2/mui.h<br>
+        -- Installing: /usr/local/include/u8g2/mui_u8g2.h<br>
+        -- Installing: /usr/local/include/u8g2/u8g2.h<br>
+        -- Installing: /usr/local/include/u8g2/u8x8.h<br>
+        -- Installing: /usr/local/lib/cmake/u8g2/u8g2-targets.cmake<br>
+        -- Installing: /usr/local/lib/cmake/u8g2/u8g2-targets-noconfig.cmake<br>
         -- Installing: /usr/local/lib/cmake/u8g2/u8g2-config.cmake
+        </p>
 
-        Create a Symlink for Easier Access:
-        ```bash
-        sudo ln -s /usr/local/include/u8g2 /usr/local/include/u8g2
-        ```
-   </details></li>
+         <p>Create a Symlink for Easier Access:</p>
+         <pre><code>sudo ln -s /usr/local/include/u8g2 /usr/local/include/u8g2</code></pre>
+      </details>
+   </li>
 </ol>
+
+
+
 
 ### Option 2: Using an E-ink Display
 
