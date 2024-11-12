@@ -82,4 +82,5 @@ For monochrome OLEDs and LCDs:
 ### Option 2: Using an E-ink Display
 
 
-### Option 3: Using the FC plus board with the OLED onboard
+### Option 3: Using the FC plus board
+![sbc_fc_plus](Images/sbc_fc_plus.png)
