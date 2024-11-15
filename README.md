@@ -80,7 +80,48 @@ For monochrome OLEDs and LCDs:
 
 
 ### Option 2: Using an E-ink Display
+![epaper](Images/epaper.png)
 
+For E-ink (ePaper) and TFT LCD displays:
+<ol style="line-height: 2; list-style-type: none;">
+   <li>
+      <details>
+        <summary>LVGL Library Setup</summary>
+        <ol style="line-height: 2; list-style-type: none;">
+            <li>
+               <details>
+               <summary>1. Clone the LVGL Repository</summary>
+               <p>Clone the LVGL GitHub repository:</p>
+               <pre><code>git clone https://github.com/lvgl/lvgl.git</code></pre>
+               <p>Enter the cloned directory:</p>
+               <pre><code>cd lvgl</code></pre>
+               </details>
+            </li>
+            <li>
+               <details>
+               <summary>2. Configure Your Build System</summary>
+               <p>For a standard CMake setup:</p>
+               <pre><code>mkdir build && cd build</code></pre>
+               <pre><code>cmake ..</code></pre>
+               <p>Add LVGL to your `CMakeLists.txt`:</p>
+               <pre><code>add_subdirectory(lvgl)
+         include_directories(lvgl)
+         target_link_libraries(your_project lvgl)</code></pre>
+               </details>
+            </li>
+            <li>
+               <details>
+               <summary>3. Configure LVGL Settings</summary>
+               <p>Modify `lv_conf.h`:</p>
+               <pre><code>#define LV_COLOR_DEPTH 16
+         #define LV_HOR_RES_MAX 240
+         #define LV_VER_RES_MAX 320</code></pre>
+               </details>
+            </li>
+         </ol>
+      </details>
+   </li>
+</ol>
 
 ### Option 3: Using the FC plus board
 ![sbc_fc_plus](Images/sbc_fc_plus.png)
