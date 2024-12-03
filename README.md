@@ -74,8 +74,14 @@ For monochrome OLEDs and LCDs:
          <pre><code>sudo ln -s /usr/local/include/u8g2 /usr/local/include/u8g2</code></pre>
       </details>
    </li>
+   <li>
+      <p align="left">
+         <img src="Images/logo_demo.png" alt="sbc_fc" width=150>
+      </p>
+      <a href="./Logo/logo.md">Create and integrate your custom logo as Splash Screen</a>
+   </li>  
 </ol>
-
+ 
 
 
 
@@ -125,3 +131,4 @@ For E-ink (ePaper) and TFT LCD displays:
 
 ### Option 3: Using the FC plus board
 ![sbc_fc_plus](Images/sbc_fc_plus.png)
+
