@@ -78,7 +78,7 @@ For monochrome OLEDs and LCDs:
       <p align="left">
          <img src="Images/logo_demo.png" alt="sbc_fc" width=150>
       </p>
-      <a href="./Logo/logo.md">Create and integrate your custom logo as Splash Screen</a>
+      <a href="./Logo/README.md">Create and integrate your custom logo as Splash Screen</a>
    </li>  
 </ol>
  
