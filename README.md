@@ -7,7 +7,12 @@
 ## Integrating Peripherals for Status Display and Image Processing in UAVs
 ![sbc_fc_ench](Images/sbc_fc_ench.png)
 
-### Option 1: Using an OLED Display
+
+### Display Integration Options
+
+Three different ways to integrate a display into your project. Choose the option that best fits your requirements and hardware capabilities.
+
+#### Option 1: Using an OLED Display
 ![oled](Images/oled.png)
 
 For monochrome OLEDs and LCDs:
@@ -85,7 +90,7 @@ For monochrome OLEDs and LCDs:
 
 
 
-### Option 2: Using an E-ink Display
+#### Option 2: Using an E-ink Display
 ![epaper](Images/epaper.png)
 
 For E-ink (ePaper) and TFT LCD displays:
@@ -129,6 +134,24 @@ For E-ink (ePaper) and TFT LCD displays:
    </li>
 </ol>
 
-### Option 3: Using the FC plus board
+#### Option 3: Using the FC plus board
 ![sbc_fc_plus](Images/sbc_fc_plus.png)
+
+
+
+
+
+## Contributing
+
+Your contributions and suggestions are crucial for the improvement of this project!  Feel free to submit pull requests or open issues if you encounter any problems.
+
+## License
+
+This project is licensed under the [GPLv3 License](https://opensource.org/licenses/GPL-3.0) - see the [LICENSE](LICENSE) file for details.
+
+
+
+---
+
+**Thank you for visiting mavlink-sbc-fc-bridge!**
 
