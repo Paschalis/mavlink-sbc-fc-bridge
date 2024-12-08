@@ -4,15 +4,89 @@
   <img src="Images/sbc_fc.png" alt="sbc_fc">
 </p>
 
+This repository explores MAVLink communication between flight controllers and SBCs, enabling UAV autonomy with features like peripheral integration and real-time image processing.
+
 ## Integrating Peripherals for Status Display and Image Processing in UAVs
 ![sbc_fc_ench](Images/sbc_fc_ench.png)
 
 
-### Display Integration Options
+### 1. Camera for Image Processing
+Cameras can enhance UAV capabilities by enabling image processing tasks such as object detection, tracking, and navigation. These tasks can be performed on the SBC and integrated into any of the following setups: OLED displays, e-ink displays, or FC plus boards.
+
+<ol style="line-height: 2; list-style-type: none;">
+<details>
+<summary>Steps to Integrate the Camera</summary>
+
+#### 1. Set up the Camera on the SBC
+
+Ensure the camera module is compatible with your SBC. Connect the camera securely and verify it is recognized by the SBC's operating system.
+
+```bash
+# Check if the camera is detected
+ls /dev/video*
+```
+
+#### 2. Install Required Libraries for Image Processing
+
+Install software such as OpenCV for image capture and processing:
+
+```bash
+sudo apt update
+sudo apt install libopencv-dev python3-opencv
+```
+
+#### 3. Test the Camera
+
+Run a basic Python script to test the camera:
+
+```python
+import cv2
+
+cap = cv2.VideoCapture(0)
+while True:
+    ret, frame = cap.read()
+    if not ret:
+        break
+    cv2.imshow('Camera Feed', frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+cap.release()
+cv2.destroyAllWindows()
+```
+
+#### 4. Develop Image Processing Features
+
+Implement tasks like object detection, lane following, or obstacle avoidance using frameworks such as TensorFlow Lite, YOLO, or custom algorithms.
+
+#### 5. Communicate Results to the Flight Controller
+
+Use MAVLink messages to send image processing data (e.g., detected object coordinates) to the flight controller for UAV decision-making.
+
+```python
+from pymavlink import mavutil
+
+# Establish a connection
+master = mavutil.mavlink_connection('udpout:127.0.0.1:14550')
+
+# Send processed data
+master.mav.object_detection.send(
+    obj_id=1,
+    x=50,
+    y=50,
+    z=10
+)
+```
+</details>
+</ol>
+
+### 2. Display Integration Options
 
 Three different ways to integrate a display into your project. Choose the option that best fits your requirements and hardware capabilities.
 
-#### Option 1: Using an OLED Display
+<ol style="line-height: 2; list-style-type: none;">
+<details>
+<summary>Option 1: Using an OLED Display</summary>
+
 ![oled](Images/oled.png)
 
 For monochrome OLEDs and LCDs:
@@ -87,10 +161,13 @@ For monochrome OLEDs and LCDs:
    </li>  
 </ol>
  
+</details>
+</ol>
 
+<ol style="line-height: 2; list-style-type: none;">
+<details>
+<summary>Option 2: Using an E-ink Display</summary>
 
-
-#### Option 2: Using an E-ink Display
 ![epaper](Images/epaper.png)
 
 For E-ink (ePaper) and TFT LCD displays:
@@ -134,11 +211,18 @@ For E-ink (ePaper) and TFT LCD displays:
    </li>
 </ol>
 
-#### Option 3: Using the FC plus board
+</details>
+</ol>
+
+<ol style="line-height: 2; list-style-type: none;">
+<details>
+<summary>Option 3: Using the FC plus board</summary>
+
 ![sbc_fc_plus](Images/sbc_fc_plus.png)
 
 
-
+</details>
+</ol>
 
 
 ## Contributing
