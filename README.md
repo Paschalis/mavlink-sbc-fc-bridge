@@ -226,6 +226,8 @@ For E-ink (ePaper) and TFT LCD displays:
 
 ## Related Projects
 
+### FC Plus Sensor Module
+
 **FC Plus** is a modular add-on board for UAV flight controllers, offering advanced features such as telemetry, GPS, object avoidance (ToF, Sonar, IR), and LED indicators for status feedback. This repository includes comprehensive documentation, hardware setup instructions, sensor integration guides, and communication protocols (LoRa/WiFi) to improve UAV autonomy, safety, and performance.
 
 <div align="center">
@@ -236,8 +238,15 @@ For E-ink (ePaper) and TFT LCD displays:
 
 </div>
 
-Explore more about the **FC Plus Sensor Module** and its integration into UAV systems by clicking on the badge above to access the full documentation and setup guide.
+### ESP32 UAV Telemetry Monitor
 
+A lightweight ESP32-based telemetry screen for displaying MAVLink UAV status over WiFi.
+<div align="center">
+
+[![ESP32 UAV Telemetry Monitor](https://img.shields.io/badge/📡%20ESP32--UAV--Telemetry--Monitor-Visit%20Now!-orange?style=for-the-badge)](https://github.com/Paschalis/esp32-uav-telemetry-monitor)  
+[![Stars](https://img.shields.io/github/stars/Paschalis/esp32-uav-telemetry-monitor?label=🌟%20Stars&style=for-the-badge&color=yellow)](https://github.com/Paschalis/esp32-uav-telemetry-monitor/stargazers) [![Forks](https://img.shields.io/github/forks/Paschalis/esp32-uav-telemetry-monitor?label=🍴%20Forks&style=for-the-badge&color=blue)](https://github.com/Paschalis/esp32-uav-telemetry-monitor/network/members) [![Activity](https://img.shields.io/github/last-commit/Paschalis/esp32-uav-telemetry-monitor?label=⏳%20Last%20Update&style=for-the-badge&color=green)](https://github.com/Paschalis/esp32-uav-telemetry-monitor/commits/main)
+
+</div>
 
 
 ## Contributing
